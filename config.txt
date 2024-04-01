@@ -1,0 +1,10 @@
+Python 3.10.12
+
+!pip install -q accelerate==0.21.0 peft==0.4.0 bitsandbytes==0.40.2 transformers==4.31.0 trl==0.4.7
+
+!pip install torch==2.1.0+cu121 datasets==2.17.1 transformers==4.31.0 pandas==1.5.3
+
+
+
+------
+Reconocer al MICIT Y a la prmotodora. Y personas del red bioma. 
