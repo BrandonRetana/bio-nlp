@@ -1,0 +1,41 @@
+fine_tune_prompt
+"
+<s>[INST] Descompón el siguiente texto delimitado por triples comillas invertidas, identificando las entidades con nombre.
+    Construye un JSON que incluya fragmentos de las entidades con campos como ""nombre"", ""tipo"" y ""atributos"".
+    Asegúrate de abarcar todas las entidades detectadas.
+    ``` árbol , 1030 m ;```
+    Entrega solo el JSON:
+
+[/INST]{""entidad_bilogica"": ""árbol"", ""caracteristicas"": {""tamaño"": ""1030m""}} </s>"
+"
+<s>[INST] Descompón el siguiente texto delimitado por triples comillas invertidas, identificando las entidades con nombre.
+    Construye un JSON que incluya fragmentos de las entidades con campos como ""nombre"", ""tipo"" y ""atributos"".
+    Asegúrate de abarcar todas las entidades detectadas.
+    ``` ramitas puberulentas ;```
+    Entrega solo el JSON:
+
+[/INST]{""entidad_bilogica"": ""rama"", ""caracteristicas"": {""pubescencia"": ""puberulentas""}} </s>"
+"
+<s>[INST] Descompón el siguiente texto delimitado por triples comillas invertidas, identificando las entidades con nombre.
+    Construye un JSON que incluya fragmentos de las entidades con campos como ""nombre"", ""tipo"" y ""atributos"".
+    Asegúrate de abarcar todas las entidades detectadas.
+    ``` estípulas ausentes .```
+    Entrega solo el JSON:
+
+[/INST]{""entidad_bilogica"": ""estípula"", ""caracteristicas"": {""cantidad nominal"": ""ausentes""}} </s>"
+"
+<s>[INST] Descompón el siguiente texto delimitado por triples comillas invertidas, identificando las entidades con nombre.
+    Construye un JSON que incluya fragmentos de las entidades con campos como ""nombre"", ""tipo"" y ""atributos"".
+    Asegúrate de abarcar todas las entidades detectadas.
+    ``` hojas simples , alternas , 718 x 27 cm , elípticas a elípticooblongas , ápice agudoacuminado , glabras , borde levemente aserrado con dientes glandulares y trinervadas en la base .```
+    Entrega solo el JSON:
+
+[/INST]{""entidad_bilogica"": ""diente"", ""caracteristicas"": {""pubescencia"": ""glandulares""}} </s>"
+"
+<s>[INST] Descompón el siguiente texto delimitado por triples comillas invertidas, identificando las entidades con nombre.
+    Construye un JSON que incluya fragmentos de las entidades con campos como ""nombre"", ""tipo"" y ""atributos"".
+    Asegúrate de abarcar todas las entidades detectadas.
+    ``` hojas simples , alternas , 718 x 27 cm , elípticas a elípticooblongas , ápice agudoacuminado , glabras , borde levemente aserrado con dientes glandulares y trinervadas en la base .```
+    Entrega solo el JSON:
+
+[/INST]{""entidad_bilogica"": ""borde"", ""caracteristicas"": {""forma"": ""levemente aserrado""}} </s>"
