@@ -25,7 +25,7 @@ import subprocess
 model_name = "NousResearch/Llama-2-7b-chat-hf"
 
 # The instruction dataset to use
-dataset_name = "/data/test_data.csv"
+dataset_name = "/home/brandon/GIT/bio-nlp/data/test_data.csv"
 
 # Fine-tuned model name
 new_model = "llama-2-7b-bionlp-test-v2"
