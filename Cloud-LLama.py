@@ -15,7 +15,9 @@ from transformers import (
 from peft import LoraConfig, PeftModel
 from trl import SFTTrainer
 import pandas as pd
+from datasets import Dataset
 import subprocess
+from sklearn.model_selection import train_test_split
 
 
 # ----------------------------------------------------------------------------- Parameters 
@@ -137,6 +139,11 @@ device_map = {"": 0}
 # Load dataset (you can process it here)
 dataset = load_dataset("csv", data_files=dataset_name, split="train")
 
+# Load data in training set and evaluation set
+train_dataset, eval_dataset = train_test_split(dataset, test_size=0.2, random_state=42)
+train_dataset = Dataset.from_dict(train_dataset)
+eval_dataset = Dataset.from_dict(eval_dataset)
+
 # Load tokenizer and model with QLoRA configuration
 compute_dtype = getattr(torch, bnb_4bit_compute_dtype)
 
@@ -206,6 +213,7 @@ training_arguments = TrainingArguments(
 trainer = SFTTrainer(
     model=model,
     train_dataset=dataset,
+    eval_dataset=eval_dataset,
     peft_config=peft_config,
     dataset_text_field="fine_tune_prompt",
     max_seq_length=max_seq_length,

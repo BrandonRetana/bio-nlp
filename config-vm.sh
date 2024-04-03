@@ -75,7 +75,7 @@ echo "Instalando bibliotecas necesarias parte 2"
 pip install datasets==2.17.1 transformers==4.31.0 pandas==1.5.3
 
 echo "Instalando bibliotecas necesarias parte 3"
-pip install scipy
+pip install scipy tensorboardX scikit-learn 
 
 echo "Instalando GIT..."
 sudo apt install git
