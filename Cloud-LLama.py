@@ -140,9 +140,8 @@ device_map = {"": 0}
 dataset = load_dataset("csv", data_files=dataset_name, split="train")
 
 # Load data in training set and evaluation set
-train_dataset, eval_dataset = train_test_split(dataset, test_size=0.2, random_state=42)
-train_dataset = Dataset.from_dict(train_dataset)
-eval_dataset = Dataset.from_dict(eval_dataset)
+train_dataset = dataset.train_test_split(test_size=0.2, seed=42)['train']
+eval_dataset = dataset.train_test_split(test_size=0.2, seed=42)['test']
 
 # ----------------------------------------------------------------------------- Fine Tune 
 #------------------------------------------------------------------------------
