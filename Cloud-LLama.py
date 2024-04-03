@@ -25,10 +25,10 @@ import subprocess
 model_name = "NousResearch/Llama-2-7b-chat-hf"
 
 # The instruction dataset to use
-dataset_name = "/home/brandon/GIT/bio-nlp/data/test_data.csv"
+dataset_name = "/home/brandon/Test/bio-nlp/data/prompts_finetune_dataset.csv"
 
 # Fine-tuned model name
-new_model = "llama-2-7b-bionlp-test-v2"
+new_model = "llama-2-7b-bionlp-v2"
 
 ################################################################################
 # QLoRA parameters

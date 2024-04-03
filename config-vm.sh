@@ -74,5 +74,8 @@ pip install torch==2.1.0+cu121 -f https://download.pytorch.org/whl/torch_stable.
 echo "Instalando bibliotecas necesarias parte 2"
 pip install datasets==2.17.1 transformers==4.31.0 pandas==1.5.3
 
+echo "Instalando bibliotecas necesarias parte 3"
+pip install scipy
+
 echo "Instalando GIT..."
 sudo apt install git
