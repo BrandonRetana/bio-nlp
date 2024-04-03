@@ -134,7 +134,7 @@ packing = False
 # Load the entire model on the GPU 0
 device_map = {"": 0}
 
-# ----------------------------------------------------------------------------- Fine Tune 
+# ----------------------------------------------------------------------------- Load Data
 #------------------------------------------------------------------------------
 # Load dataset (you can process it here)
 dataset = load_dataset("csv", data_files=dataset_name, split="train")
@@ -144,6 +144,8 @@ train_dataset, eval_dataset = train_test_split(dataset, test_size=0.2, random_st
 train_dataset = Dataset.from_dict(train_dataset)
 eval_dataset = Dataset.from_dict(eval_dataset)
 
+# ----------------------------------------------------------------------------- Fine Tune 
+#------------------------------------------------------------------------------
 # Load tokenizer and model with QLoRA configuration
 compute_dtype = getattr(torch, bnb_4bit_compute_dtype)
 
