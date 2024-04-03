@@ -212,8 +212,8 @@ training_arguments = TrainingArguments(
 # Set supervised fine-tuning parameters
 trainer = SFTTrainer(
     model=model,
-    train_dataset=dataset,
-    eval_dataset=eval_dataset,
+    train_dataset=train_dataset,
+    eval_dataset=eval_dataset, 
     peft_config=peft_config,
     dataset_text_field="fine_tune_prompt",
     max_seq_length=max_seq_length,
